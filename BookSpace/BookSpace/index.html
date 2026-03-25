@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpace — Tu rincón de lectura</title>
+  <link rel="stylesheet" href="BookSpace.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">📚 BookSpace</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="libros.html">Libros</a></li>
+          <li><a href="autores.html">Autores</a></li>
+          <li><a href="categorias.html">Categorías</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="login.html" class="btn-login">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2>Descubre un universo de libros</h2>
+        <p>Sumérgete en historias fascinantes y comparte tu amor por la lectura en una comunidad creada para los verdaderos lectores.</p>
+        <a href="libros.html" class="btn-primary">Explorar catálogo</a>
+      </div>
+      <div class="hero-img">
+        <img src="./chica leyendo.png" alt="Ilustración de libros">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about">
+    <div class="container about-content">
+      <h3>¿Qué es BookSpace?</h3>
+      <p>
+        BookSpace es una librería virtual diseñada para ofrecerte una experiencia cálida y amigable. Aquí podrás descubrir nuevos autores, explorar distintos géneros y encontrar inspiración en cada página.
+      </p>
+    </div>
+  </section>
+
+  <button id="translate-button">
+    🌐 Traducir (ES/EN)
+  </button>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features">
+    <div class="container feature-grid">
+      <div class="feature-card">
+        <h4>Catálogo variado</h4>
+        <p>Explora cientos de títulos de todos los géneros: romance, ciencia, aventura y más.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Autores destacados</h4>
+        <p>Descubre las historias detrás de los escritores que han marcado generaciones.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Comunidad lectora</h4>
+        <p>Comparte tus lecturas y conecta con personas que aman los libros tanto como tú.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2025 BookSpace | todos los derechos reservados</p>
+      <div class="social-links">
+        <a href="#" class="social-item">
+          <img src="./fecebook.jpg" alt="Facebook">
+          <span>Facebook</span>
+        </a>
+        <a href="#" class="social-item">
+          <img src="./insta.jpg" alt="Instagram">
+          <span>Instagram</span>
+        </a>
+        <a href="#" class="social-item">
+          <img src="./x.jpg" alt="X">
+          <span>X</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts necesarios (Supabase primero, luego tu script) -->
+  <script src="../../assets/js/supabase.js" defer></script>
+  <script src="BookSpace.js" defer></script>
+
+  <!-- 🔘 Botón de cambio de tema -->
+  <button id="toggle-theme" style="position: fixed; bottom: 15px; right: 15px; padding: 10px; border-radius: 5px; cursor: pointer;">
+    🌞 / 🌙
+  </button>
+
+  <!-- Script del cambio de tema -->
+  <script src="modo claro oscuro.js" defer></script>
+  <script src="path/to/tu-libreria-de-traduccion.js"></script>
+  <script src="traductor.js" defer></script>
+
+</body>
+</html>
+

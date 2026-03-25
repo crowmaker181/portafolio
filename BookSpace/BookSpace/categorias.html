@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpace — Categorías</title>
+  <link rel="stylesheet" href="BookSpace.css">
+  <style>
+    .books-by-category {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+      justify-items: center;
+    }
+    .book-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #eee;
+      width: 230px;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .book-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .book-card h4 {
+      margin-top: 8px;
+      font-size: 1em;
+      color: #333;
+    }
+    .book-card p {
+      font-size: 0.9em;
+      color: #666;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">📚 BookSpace</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="libros.html">Libros</a></li>
+          <li><a href="autores.html">Autores</a></li>
+          <li><a href="categorias.html" class="active">Categorías</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CATEGORÍAS ===== -->
+  <main>
+    <section class="categorias">
+      <div class="container">
+        <h2>Categorías de Libros</h2>
+
+        <div class="category-grid">
+          <div class="category-card romance" data-category="Romance">Romance</div>
+          <div class="category-card ciencia" data-category="Ciencia Ficción">Ciencia Ficción</div>
+          <div class="category-card misterio" data-category="Misterio">Misterio</div>
+          <div class="category-card fantasia" data-category="Fantasía">Fantasía</div>
+          <div class="category-card aventura" data-category="Aventura">Aventura</div>
+          <div class="category-card poesia" data-category="Poesía">Poesía</div>
+        </div>
+
+        <!-- Sección donde se mostrarán los libros filtrados -->
+        <div id="booksContainer" class="books-by-category"></div>
+      </div>
+    </section>
+  </main>
+  <button id="translate-button">
+    🌐 Traducir (ES/EN)
+  </button>
+
+  <footer class="footer">
+    <p>© 2025 BookSpace — Todos los derechos reservados</p>
+  </footer>
+
+  <!-- 🔘 Botón de modo oscuro -->
+  <button id="toggle-theme" style="position: fixed; bottom: 15px; right: 15px; padding: 10px; border-radius: 5px; cursor: pointer;">
+    🌞 / 🌙
+  </button>
+
+  <!-- Script para el cambio de tema -->
+  <script src="modo claro oscuro.js" defer></script>
+
+  <script>
+    // ===== LISTA DE LIBROS CON RUTAS REALES =====
+    const libros = [
+      { titulo: "666: La casa endemoniada", autor: "Jay Anson", categoria: "Misterio", imagen: "666 la casa.jpg" },
+      { titulo: "Saco de huesos", autor: "Stephen King", categoria: "Misterio", imagen: "saco de huesos.jpg" },
+      { titulo: "Ortiga y hueso", autor: "T. Kingfisher", categoria: "Fantasía", imagen: "ortiga.jpg" },
+      { titulo: "Rojo, blanco y sangre azul", autor: "Casey McQuiston", categoria: "Romance", imagen: "rojo blanco.jpg" },
+      { titulo: "A dos metros de ti", autor: "Rachael Lippincott", categoria: "Romance", imagen: "a dos metros de ti.jpg" },
+      { titulo: "El sonido de tu piel al desgarrarse", autor: "Álvaro Vanegas", categoria: "Misterio", imagen: "el sonido de tu piel.jpg" },
+      { titulo: "Harry Potter y la piedra filosofal", autor: "J.K. Rowling", categoria: "Fantasía", imagen: "harry potter.jpg" },
+      { titulo: "El Principito", autor: "Antoine de Saint-Exupéry", categoria: "Aventura", imagen: "el principito.jpg" },
+      { titulo: "1984", autor: "George Orwell", categoria: "Ciencia Ficción", imagen: "1984.jpg"  },
+      { titulo: "Cien años de soledad", autor: "Gabriel García Márquez", categoria: "Poesía", imagen: "cien años de soledad.jpg" }
+    ];
+
+    // ===== FUNCIÓN PARA MOSTRAR LOS LIBROS =====
+    const categoryCards = document.querySelectorAll('.category-card');
+    const booksContainer = document.getElementById('booksContainer');
+
+    categoryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const categoria = card.dataset.category;
+        const filtrados = libros.filter(libro => libro.categoria === categoria);
+
+        if (filtrados.length === 0) {
+          booksContainer.innerHTML = `<p>No hay libros disponibles en la categoría "${categoria}".</p>`;
+        } else {
+          booksContainer.innerHTML = filtrados.map(libro => `
+            <div class="book-card">
+              <img src="${libro.imagen}" alt="${libro.titulo}" onerror="this.src='https://via.placeholder.com/230x260?text=Sin+Portada';">
+              <h4>${libro.titulo}</h4>
+              <p>${libro.autor}</p>
+            </div>
+          `).join('');
+        }
+
+        window.scrollTo({ top: booksContainer.offsetTop - 50, behavior: 'smooth' });
+      });
+    });
+  </script>
+  <script src="traductor.js" defer></script>
+</body>
+</html>

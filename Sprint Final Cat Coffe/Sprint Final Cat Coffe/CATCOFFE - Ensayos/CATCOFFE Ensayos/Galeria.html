@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Galeria.css" />
+  <link rel="icon" type="image/png" href="./IMG/LOGO1.jpg">
+    <link href="../../../assets/css/catcoffe-fonts.css" rel="stylesheet">
+    <title>Galeria Cat Coffe</title>
+</head>
+<body>
+
+<section class="loader">
+  <span class="paw">🐾</span>
+  <span class="paw">🐾</span>
+  <span class="paw">🐾</span>
+
+  <section class="coffee-cup">
+    <span class="steam steam1"></span>
+    <span class="steam steam2"></span>
+    <span class="steam steam3"></span>
+    <span class="cup">☕</span>
+  </section>
+</section>
+
+     <header class="Menu_Superior">
+  <nav>
+    <h1 class="gato">
+      <img src="./IMG/otro logo.png" alt="Gato_LOgo" width="200px" height="200px"> 
+      
+    </h1>
+    <a href="./INDEX.html">Inicio</a>
+    <section class="dropdown">
+      <a href="menu.html">Menú ▾</a>
+      <section class="submenu">
+        <a href="menu.html#combos">🍽️ Combos del Día</a>
+        <a href="menu.html#bebidasCalientes" >☕ Bebidas Calientes</a>
+        <a href="menu.html#bebidasFrias">🧊 Bebidas Frías</a>
+        <a href="menu.html#Postres">🍰 Delicias Dulces</a>
+        <a href="menu.html#Panes">🍞 Variedades de Pan</a>
+        <a href="menu.html#OpcionesSaladas">🥪 Opciones Saladas</a>
+      </section>
+    </section>
+    <a href="./Galeria.html">Galería</a>
+    <a href="./Sobrenosostros.html">Sobre Nosotros</a>
+    <a href="./Contacto.html">Contacto</a>
+  </nav>
+</header>
+  <main>
+  <h1 class="uno">Galería Cat Coffee</h1>
+  <p>Descubre el ambiente acogedor de nuestro café y conoce a nuestros gatitos adorables.</p>
+
+  <section class="galeria-grid">
+    <img src="./IMG/cafe elegante.jpg" alt="Taza de café elegante" />
+    <img src="./IMG/gato adopcion.jpg" alt="Gato en adopción" />
+    <img src="./IMG/por dentro.jpg" alt="Interior del Cat Coffee" />
+    <img src="./IMG/latte.jpg" alt="Latte art" />
+    <img src="./IMG/gato acostado.jpg" alt="Gato acostado en sillón" />
+    <img src="./IMG/gato chocolate.jpeg" alt="chocolate forma de gato" />
+    <img src="./IMG/jugito decorado.PNG" alt="JUGUITO DECORADO">
+    <img src="./IMG/agua de matas.PNG" alt="agua de matas">
+    <img src="./IMG/postre.PNG" alt="postre de chocolate">
+    <img src="./IMG/leerrrrrrrr.PNG" alt="leer">
+    <img src="./IMG/posillo.PNG" alt="cafe">
+    <img src="./IMG/leeerrrr 2.PNG" alt=" leer">
+    
+
+  </section>
+</main>
+<br><br><br>
+    <section class="Servicios">
+        <h1 class="uno">Refugio Huellitas de Cat Coffee</h1>
+        <p>"En Huellitas de Cat Coffee, cada patita abandonada merece un nuevo comienzo. Rescatamos, cuidamos y conectamos a nuestros peluditos con personas que buscan amor incondicional. Haz match con una huellita... ¡y deja que una vida salve la tuya!"</p> 
+      <a href="#">Servicios ▾</a>
+      <section class="submenu">
+        <a href="https://wa.me/573223786677">🐾 Adopción</a>
+        <a href="https://wa.me/573223786677">💪 Voluntariado</a>
+        <a href="https://wa.me/573223786677">💰 Donaciones</a>
+      </section>
+    </section>
+    <br><br>
+
+<section class="productos">
+  <div class="tarjeta">
+    <img src="./IMG/Max.jpg" alt="Max en adopción">
+    <div class="tooltip">
+      Max fue rescatado de la calle, es noble, juguetón y le encanta correr. Ideal para familias activas.
+    </div>
+    <p><strong>Max</strong><br>Pastor Criollo - 2 Meses</p>
+  </div>
+
+  <div class="tarjeta">
+    <img src="./IMG/gatito.jpg" alt="Mila en adopción">
+    <div class="tooltip">
+      Mila es curiosa y cariñosa. Le encanta dormir en lugares soleados y jugar con pelotitas.
+    </div>
+    <p><strong>Mila</strong><br>Siamesa - 4 meses</p>
+  </div>
+
+  <div class="tarjeta">
+    <img src="./IMG/MezclaGolden5.jpg" alt="Canela en adopción">
+    <div class="tooltip">
+      Canela es alegre, protectora y perfecta para niños. Ama correr en espacios abiertos.
+    </div>
+    <p><strong>Canela</strong><br>Mezcla Golden - 1 año</p>
+  </div>
+
+  <div class="tarjeta">
+    <img src="./IMG/TomYJerry5.jpg" alt="Tom y Jerry en adopción">
+    <div class="tooltip">
+      Estos hermanitos son inseparables. Traviesos, dulces y llenos de energía.
+    </div>
+    <p><strong>Tom y Jerry</strong><br>Hermanitos - 3 meses</p>
+  </div>
+</section>
+<br>
+
+
+<main class="contenido-principal">
+  <!-- Sección ampliable -->
+</main>
+
+</header>
+
+
+
+<h1>Cat Coffee</h1>
+<h2>Formulario de Adopción</h2>
+
+<!-- Mensaje de éxito oculto -->
+<div id="mensajeExito" style="display: none;">
+  <h3>✅ Evaluaremos tus respuestas para validar la adopción.</h3>
+  <p>Si se aprueba la adopción, te llegará un correo para confirmar el día en que podrás recoger a tu peludito.</p>
+</div>
+
+<!-- Formulario -->
+<form id="formulario" onsubmit="mostrarMensaje(event)">
+  <fieldset>
+    <legend>Información del Adoptante</legend>
+
+    <label for="nombre">Nombre completo:</label><br />
+    <input type="text" id="nombre" name="Nombre" required /><br /><br />
+
+    <label for="correo">Correo electrónico:</label><br />
+    <input type="email" id="correo" name="Correo" required /><br /><br />
+
+    <label for="telefono">Teléfono:</label><br />
+    <input type="tel" id="telefono" name="Teléfono" required /><br /><br />
+
+    <label for="direccion">Dirección:</label><br />
+    <textarea id="direccion" name="Dirección" rows="3" required></textarea><br /><br />
+  </fieldset>
+
+  <fieldset>
+    <legend>Información del Animal</legend>
+
+    <label for="tipo">¿Qué deseas adoptar?</label><br />
+    <select id="tipo" name="Tipo de mascota" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Perrito">Perrito</option>
+      <option value="Gatito">Gatito</option>
+      <option value="Ambos">Ambos</option>
+    </select><br /><br />
+
+    <label for="nombre_mascota">Nombre de la mascota (opcional):</label><br />
+    <input type="text" id="nombre_mascota" name="Nombre de la mascota" /><br /><br />
+
+    <label for="mensaje">¿Por qué quieres adoptar?</label><br />
+    <select id="mensaje" name="Motivo de adopción" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Compañía personal o familiar">Compañía personal o familiar</option>
+      <option value="Enseñar responsabilidad a mis hijos">Enseñar responsabilidad a mis hijos</option>
+      <option value="Siempre he querido una mascota">Siempre he querido una mascota</option>
+      <option value="Pérdida reciente de otra mascota">Pérdida reciente de otra mascota</option>
+      <option value="Otro">Otro</option>
+    </select><br /><br />
+  </fieldset>
+
+  <fieldset>
+    <legend>Cuestionario de Aptitud</legend>
+
+    <p>1. ¿Tienes experiencia previa con mascotas?</p>
+    <select name="Experiencia previa" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Sí">Sí</option>
+      <option value="No">No</option>
+    </select><br /><br />
+
+    <p>2. ¿Dónde vivirá la mascota?</p>
+    <select name="Lugar de vivienda" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Casa con patio">Casa con patio</option>
+      <option value="Casa sin patio">Casa sin patio</option>
+      <option value="Apartamento">Apartamento</option>
+      <option value="Finca o zona rural">Finca o zona rural</option>
+      <option value="Otro">Otro</option>
+    </select><br /><br />
+
+    <p>3. ¿Tu vivienda es propia o arrendada?</p>
+    <select name="Tipo de vivienda" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Propia">Propia</option>
+      <option value="Arriendo">Arriendo</option>
+    </select><br /><br />
+
+    <p>4. ¿Todos en tu hogar están de acuerdo con la adopción?</p>
+    <select name="Acuerdo del hogar" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Sí">Sí</option>
+      <option value="No">No</option>
+      <option value="No lo he hablado aún">No lo he hablado aún</option>
+    </select><br /><br />
+
+    <p>5. ¿Tienes otras mascotas actualmente?</p>
+    <select name="Otras mascotas" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="No">No</option>
+      <option value="Sí - Perro(s)">Sí - Perro(s)</option>
+      <option value="Sí - Gato(s)">Sí - Gato(s)</option>
+      <option value="Sí - Otros">Sí - Otros</option>
+    </select><br /><br />
+
+    <p>6. ¿Cuentas con ingresos estables para cuidar a la mascota?</p>
+    <select name="Ingresos estables" required>
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Sí, cuento con ingresos estables">Sí, cuento con ingresos estables</option>
+      <option value="Sí, con ayuda de familia o convivientes">Sí, con ayuda de familia o convivientes</option>
+      <option value="No, pero estoy dispuesto a asumir la responsabilidad">No, pero estoy dispuesto a asumir la responsabilidad</option>
+      <option value="No cuento con los recursos necesarios">No cuento con los recursos necesarios</option>
+    </select><br /><br />
+
+    <p>7. (Opcional) ¿Cuál es tu rango de ingreso mensual aproximado?</p>
+    <select name="Rango de ingresos">
+      <option value="">-- Selecciona una opción --</option>
+      <option value="Menos de $500.000">Menos de $500.000</option>
+      <option value="Entre $500.000 y $1.000.000">Entre $500.000 y $1.000.000</option>
+      <option value="Entre $1.000.000 y $2.000.000">Entre $1.000.000 y $2.000.000</option>
+      <option value="Más de $2.000.000">Más de $2.000.000</option>
+      <option value="Prefiero no responder">Prefiero no responder</option>
+    </select><br /><br />
+  </fieldset>
+
+  <input type="submit" value="Enviar Solicitud" />
+</form>
+
+
+
+<br><br>
+
+  <footer>
+    <a>© 2025 Cat Coffee. Todos los derechos reservados.</a>
+    <a>
+      <a href="https://facebook.com/catcoffee" target="_blank">Facebook</a> |
+      <a href="https://instagram.com/catcoffee" target="_blank">Instagram</a> |
+      <a href="https://wa.me/573223786677" target="_blank">WhatsApp</a>
+    </a>
+    <a>Correo: contacto@catcoffee.co</a>
+    <a>Dirección: Calle 42 #15-23, Bogotá</a>
+  </footer>
+
+
+
+  <!-- Botón hamburguesa -->
+<button id="btn-hamburguesa" class="hamburguesa-flotante" aria-label="Abrir menú">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Menú lateral -->
+<nav id="menu-lateral-personal" class="menu-lateral-personal">
+  <a href="./INDEX.html">Inicio</a>
+  <br>
+  <a href="./Menu.html">Menú</a>
+  <br>
+  <a href="./Galeria.html">Galería</a>
+  <br>
+  <a href="Sobrenosostros.html">Sobre Nosotros</a>
+  <br>
+  <a href="./Contacto.html">Contacto</a>
+</nav>
+
+
+ 
+  <script src="js.js"></script>
+  <script src="Supabase.js"></script>
+
+  <script type="module">
+  import { guardarFormularioSupabase } from './guardarSupabase.js';
+
+  // Sobrescribimos tu función de enviar
+  window.mostrarMensaje = async function(event) {
+    event.preventDefault();
+
+    await guardarFormularioSupabase(); // Esperamos que se guarde en Supabase
+
+    // Luego mostramos mensaje de éxito
+    const mensaje = document.getElementById("mensajeExito");
+    mensaje.style.display = "block";
+
+    const formulario = document.getElementById("formulario");
+    formulario.style.display = "none";
+  };
+</script>
+
+
+
+    <!-- Juan Ruiz -->
+<!-- Contacto flotante con menú hamburguesa e íconos -->
+
+<section class="contacto-flotante">
+  <input type="checkbox" id="toggle-contacto" hidden>
+  
+  <label for="toggle-contacto" class="boton-contacto" title="Contáctanos">
+    <img src="./IMG/TELEFONO.png" alt="Teléfono" />
+  </label>
+
+  <nav class="menu-contacto">
+    <a href="https://wa.me/573223786677" target="_blank" title="WhatsApp">
+      <img src="./IMG/WHATSAPP.png" alt="WhatsApp">
+    </a>
+    <a href="https://facebook.com/catcoffee" target="_blank" title="Facebook">
+      <img src="IMG/FACEBOOK.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/catcoffee" target="_blank" title="Instagram">
+      <img src="./IMG/INSTAGRAM.png" alt="Instagram">
+    </a>
+  </nav>
+</section>
+
+<button id="btnArriba" onclick="subirArriba()">↑</button>
+</body>
+</html>

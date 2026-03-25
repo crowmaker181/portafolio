@@ -1,0 +1,133 @@
+body {
+  background: #0a0a0a;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 150, 255, 0.08), transparent 70%);
+  animation: olas 20s linear infinite;
+  z-index: -1;
+}
+
+
+body::after {
+  animation: olas 35s linear infinite;
+  opacity: 0.9;
+}
+
+
+@keyframes olas {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(180deg) translate(50px, 50px);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, 0);
+  }
+}
+
+.border-gold {
+  border-bottom: 2px solid rgb(25, 213, 238);
+}
+
+
+.banner {
+  background: url('https://wallpapercave.com/wp/wp9995112.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 3px 3px 10px black;
+}
+
+
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgb(25, 213, 238);
+  margin-bottom: 15px;
+}
+
+
+.titulo {
+  color: rgb(25, 213, 238);
+  margin-bottom: 20px;
+}
+
+
+.card-pirata {
+  background-color: #1a1a1a;
+  border: 2px solid rgb(25, 213, 238);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card-pirata:hover {
+  transform: scale(1.03);
+}
+
+
+.btn-pirata {
+  background-color: rgb(25, 213, 238);
+  color: white;
+  border: none;
+}
+
+.btn-pirata:hover {
+  background-color:rgb(25, 213, 238);
+}
+
+
+.testimonio {
+  background-color: #1f1f1f;
+  border-left: 4px solid rgb(25, 213, 238);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.tech-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.tech-img:hover {
+  transform: scale(1.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.proyecto-extra {
+  transition: all 0.5s ease;
+}
+
+#sobre,
+#proyectos,
+#articulos,
+#testimonios,
+#contacto {
+  scroll-margin-top: 90px;
+}

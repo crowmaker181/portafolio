@@ -1,0 +1,239 @@
+:root {
+  --color-principal: #F28B3D;
+  --color-secundario: #FFEEDD;
+  --color-fondo: #FFF8F0;
+  --color-texto: #1A1A1A;
+  --color-hover: #D9701F;
+}
+
+/* Tipografía general */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@600&family=Shadows+Into+Light&display=swap');
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  background: url(fondo.png);
+  background-size: auto;
+}
+
+h1, h2 {
+  font-family: 'Great Vibes', cursive;
+  color: var(--color-principal);
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.banner img, .servicios img, .mapa img, img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: auto;
+  border-radius: 125px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.banner img:hover, .servicios img:hover, .mapa img:hover, img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen como aside al lado de texto */
+.imagen-aside {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin: 2em auto;
+  max-width: 1200px;
+  padding: 1em;
+  background-color: #ffffffdd;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.imagen-aside img {
+  width: 40%;
+  border-radius: 20px;
+}
+
+.imagen-aside .contenido {
+  width: 60%;
+  text-align: left;
+}
+
+/* Menú de navegación */
+.menu {
+  background-color: var(--color-principal);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 1em;
+}
+
+.menu li {
+  margin: 0 1.5em;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: var(--color-hover);
+}
+
+/* Secciones principales */
+main {
+  padding-top: 5em;
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+.promociones ul {
+  background-color: var(--color-secundario);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.promociones li {
+  margin-bottom: 1em;
+}
+
+.nota {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 1em;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-principal);
+  color: white;
+  text-align: center;
+  padding: 1.5em 1em;
+  margin-top: 3em;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+footer .sociales a img {
+  width: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+/* Formulario */
+form {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.5em;
+  font-size: 1em;
+}
+
+button {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+}
+
+@media screen and (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 0.5em 0;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  form {
+    padding: 1.5em;
+  }
+
+  .imagen-aside {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagen-aside img,
+  .imagen-aside .contenido {
+    width: 100%;
+  }
+}
+
+.slogan {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  border-radius: 500px;
+  height: auto;
+  width: 500px;
+  max-width: 100%;
+}
+
+.parrafo {
+  text-align: center;
+}
+
+/* Bloque decorativo para títulos y párrafos */
+.bloque-con-borde {
+  border: 2px solid var(--color-principal);
+  padding: 1em 2em;
+  border-radius: 12px;
+  background-color: #ffffffdd;
+  margin: 2em auto;
+  max-width: 900px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}

@@ -1,0 +1,592 @@
+/*#74542bf5
+#rgb(241, 241, 207)*/
+
+
+
+
+
+body {
+  background-color: rgb(241, 241, 207);
+  font-family: 'Satisfy', cursive;
+  margin: 0;
+  padding: 80px 20px 0 20px; /* top ya tiene 80px, añade laterales */
+font-size: 22px;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.Menu_Superior {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #74542bf5;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Menu_Superior nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  padding: 6px;
+  gap: 8px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+}
+
+.Menu_Superior nav a,
+.Menu_Superior nav .dropdown > a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #74542bf5;
+  background-color:  rgb(241, 241, 207);
+  padding: 8px 0;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+.Menu_Superior nav a:hover,
+.Menu_Superior nav .dropdown > a:hover {
+  background-color: white;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #74542bf5;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  flex-direction: column;
+}
+
+.dropdown:hover .submenu {
+  display: flex;
+}
+
+.submenu a {
+  background-color: #74542bf5;
+  color: white;
+  padding: 6px;
+  margin: 4px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+}
+
+.submenu a:hover {
+  background-color: #74542bf5;
+}
+
+/* .banner {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 60px;
+  display: block;
+} */
+
+.contenido {
+  text-align: center;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background-color: inherit;
+  justify-items: center;
+}
+
+.productos a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.productos a .tarjeta {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 280px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  font-family: 'Dancing Script', cursive;
+}
+
+.productos a .tarjeta:hover {
+  transform: translateY(-8px);
+}
+
+.productos a .tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #D6C1E8;
+}
+
+.productos a .tarjeta figcaption {
+  padding: 16px;
+  font-size: 18px;
+  color: #333;
+}
+
+.productos a .tarjeta strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #74542bf5;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(241, 241, 207);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 9999;
+  animation: ocultarLoader 3s forwards;
+  flex-direction: row;
+}
+
+.paw {
+  font-size: 2.5rem;
+  animation: saltar 1s infinite;
+  opacity: 0.8;
+}
+
+.paw:nth-child(1) { animation-delay: 0s; }
+.paw:nth-child(2) { animation-delay: 0.2s; }
+.paw:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes saltar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.coffee-cup {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  margin-left: 40px;
+}
+
+.cup {
+  font-size: 5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.steam {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  width: 10px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: subirHumo 2s infinite ease-in-out;
+}
+
+.steam1 { animation-delay: 0s; transform: translateX(-20px); }
+.steam2 { animation-delay: 0.5s; transform: translateX(0px); }
+.steam3 { animation-delay: 1s; transform: translateX(20px); }
+
+@keyframes subirHumo {
+  0% { opacity: 0; transform: translateY(0) scaleX(1); }
+  50% { opacity: 1; transform: translateY(-20px) scaleX(1.2); }
+  100% { opacity: 0; transform: translateY(-40px) scaleX(0.8); }
+}
+
+@keyframes ocultarLoader {
+  0%, 90% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.contenido-principal {
+  opacity: 0;
+  animation: mostrarContenido 3.1s forwards;
+}
+
+@keyframes mostrarContenido {
+  to { opacity: 1; }
+}
+
+footer {
+  background-color: #74542bf5;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+button {
+  background-color: beige;
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #74542bf5;
+}
+
+@media (max-width: 768px) {
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.Combo{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Botón hamburguesa flotante */
+.hamburguesa-flotante {
+  display: none; /* ⬅️ Oculto al inicio */
+  position: fixed;
+  /* ...todo lo demás que ya tienes... */
+  top: 4%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: grab;
+  z-index: 2000;
+}
+
+.hamburguesa-flotante span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Transformación a X cuando está activo */
+.hamburguesa-flotante.activo span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguesa-flotante.activo span:nth-child(2) {
+  opacity: 0;
+}
+.hamburguesa-flotante.activo span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menú lateral oculto por defecto */
+.menu-lateral-personal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: beige;
+  padding: 80px 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-lateral-personal a {
+  text-decoration: none;
+  color: #74542bf5;
+  font-size: 18px;
+}
+
+.menu-lateral-personal.activo {
+  transform: translateX(0);
+}
+
+p {
+  max-width: 700px;
+  margin: 40px auto; /* Centrado con espacio arriba y abajo */
+  padding: 20px 30px;
+  border: 2px solid #74542bf5; /* Borde decorativo */
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.5); /* Suave fondo blanco translúcido */
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+
+
+
+
+
+
+/*   Juan Ruiz    */
+/* Contacto flotante estilo hamburguesa con iconos */
+.contacto-flotante {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
+}
+
+.boton-contacto {
+  background-color: #74542bf5;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.boton-contacto:hover {
+  background-color: white;
+}
+
+.boton-contacto img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Menú oculto por defecto */
+.menu-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.menu-contacto a {
+  margin: 10px 0;
+}
+
+.menu-contacto img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s;
+}
+
+.menu-contacto img:hover {
+  transform: scale(1.3);
+}
+
+/* Activar menú cuando checkbox está marcado */
+#toggle-contacto:checked + .boton-contacto + .menu-contacto {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.gato{
+  color: white;
+}
+
+
+
+
+
+
+#btnArriba {
+  display: none; /* Oculto al inicio */
+  position: fixed;
+  bottom: 20px;
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #74542bf5;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%; /* Círculo */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+#btnArriba:hover {
+  background: #5b3f22f5; /* un poco más oscuro al pasar el mouse */
+}
+
+
+/* hola */
+.carrusel {
+  width: 100%;
+  height: 1000px; /* igual que tu banner */
+  overflow: hidden;
+  position: relative;
+  border: solid;
+  border-color: #74542bf5;
+  border-radius: 15px;
+  background-color: rgb(241, 241, 207); /* color de fondo de la página */
+}
+
+.carrusel img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: contain; /* muestra toda la imagen sin recortarla */
+  background-color: rgb(241, 241, 207); /* relleno para bordes vacíos */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 15px;
+  object-fit: cover;
+ 
+}
+
+.carrusel img.activo {
+  opacity: 1;
+}
+  
+
+/*Codigo para alinear las tarjetas :D */
+#combos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#combos .tarjeta {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  height: 350px; /* altura fija para todas */
+  justify-content: space-between;
+}
+
+#combos .tarjeta img {
+  width: 100%;
+  height: 200px; /* altura fija para imagen */
+  object-fit: cover; /* recorta para que no se deforme */
+}
+
+#combos .tarjeta figcaption {
+  text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que salten a otra fila */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* Centra cada tarjeta en su celda */
+}
+.productos {
+  display: flex;           /* Activamos Flexbox */
+  flex-wrap: wrap;         /* Permite que las tarjetas se vayan a la siguiente línea */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px;               /* Espacio entre tarjetas */
+}
+
+.tarjeta {
+  flex: 0 0 30%;           /* Cada tarjeta ocupa 30% del ancho del contenedor */
+  box-sizing: border-box;  /* Incluye padding y border en el ancho */
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* espacio entre tarjetas */
+  justify-items: center; /* centra horizontalmente cada tarjeta */
+  align-items: center; /* centra verticalmente dentro de la celda */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    grid-template-columns: 1fr; /* 1 por fila en móviles */
+  }
+}

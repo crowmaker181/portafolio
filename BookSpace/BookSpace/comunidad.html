@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpace — Comunidad</title>
+  <link rel="stylesheet" href="BookSpace.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">📚 BookSpace</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="libros.html">Libros</a></li>
+          <li><a href="autores.html">Autores</a></li>
+          <li><a href="categorias.html">Categorías</a></li>
+          <li><a href="comunidad.html" class="active">Comunidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+    <section class="comunidad">
+      <div class="container">
+        <h2>Comunidad Lectora</h2>
+        <p>Comparte tus opiniones y descubre qué piensan otros lectores.</p>
+
+        <!-- Reseñas existentes -->
+        <div class="reviews" id="reviews">
+          <div class="review-card">
+            <h4>Laura G.</h4>
+            <p>“BookSpace me ayudó a descubrir autores increíbles. Me encanta la interfaz y lo fácil que es explorar.”</p>
+          </div>
+
+          <div class="review-card">
+            <h4>Carlos M.</h4>
+            <p>“Una experiencia genial. La comunidad es muy activa y hay recomendaciones muy útiles.”</p>
+          </div>
+        </div>
+
+        <!-- Formulario para nueva reseña -->
+        <form class="review-form" id="reviewForm">
+          <h3>Deja tu reseña</h3>
+          <input type="text" id="nombre" placeholder="Tu nombre" required>
+          <textarea id="opinion" placeholder="Tu opinión" required></textarea>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main> 
+  <button id="translate-button">
+    🌐 Traducir (ES/EN)
+  </button>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 BookSpace</p>
+  </footer>
+
+  <!-- ===== SCRIPT FUNCIONAL ===== -->
+  <script>
+    const form = document.getElementById("reviewForm");
+    const reviewsContainer = document.getElementById("reviews");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // evita recarga
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const opinion = document.getElementById("opinion").value.trim();
+
+      if (nombre && opinion) {
+        // Crear reseña visual con mismo estilo
+        const nuevaReseña = document.createElement("div");
+        nuevaReseña.classList.add("review-card");
+        nuevaReseña.innerHTML = `
+          <h4>${nombre}</h4>
+          <p>“${opinion}”</p>
+        `;
+
+        // Insertar arriba de las anteriores
+        reviewsContainer.prepend(nuevaReseña);
+
+        // Limpiar formulario
+        form.reset();
+      }
+    });
+  </script>
+
+  <!-- 🔘 Botón de cambio de tema -->
+  <button id="toggle-theme" style="position: fixed; bottom: 15px; right: 15px; padding: 10px; border-radius: 5px; cursor: pointer;">
+    🌞 / 🌙
+  </button>
+
+  <!-- Script del cambio de tema -->
+  <script src="modo claro oscuro.js" defer></script>
+  <script src="traductor.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpace — Iniciar Sesión</title>
+  <link rel="stylesheet" href="BookSpace.css">
+</head>
+<body class="login-body">
+
+  <main class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form class="login-form" id="loginForm">
+      <input type="email" id="email" placeholder="Correo electrónico" required autocomplete="username">
+      <input type="password" id="password" placeholder="Contraseña" required autocomplete="current-password">
+      <button type="submit" class="btn-primary">Entrar</button>
+      <p class="error-message" id="errorMessage"></p>
+      <p class="register-text">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+    </form>
+  </main>
+  <button id="translate-button">
+    🌐 Traducir (ES/EN)
+  </button>
+
+  <!-- Botón de cambio de tema -->
+  <button id="toggle-theme" style="position: fixed; bottom: 15px; right: 15px; padding: 10px; border-radius: 5px; cursor: pointer;">
+    🌞 / 🌙
+  </button>
+  
+  <!-- Librería Supabase -->
+  <script src="../../assets/js/supabase.js" defer></script> 
+  
+  <!-- Script para login -->
+  <script src="BookSpace.js" defer></script>
+
+  <!-- Script para acambio de tema -->
+  <script src="modo claro oscuro.js" defer></script>
+
+</body>
+</html>

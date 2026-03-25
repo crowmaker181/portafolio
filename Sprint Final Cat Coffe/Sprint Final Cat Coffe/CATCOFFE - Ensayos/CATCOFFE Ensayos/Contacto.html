@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Contacto.css">
+    <link rel="icon" type="image/png" href="./IMG/LOGO1.jpg">
+    <link href="../../../assets/css/catcoffe-fonts.css" rel="stylesheet">
+    <title>Contacto Cat Cofee</title>
+</head>
+<body>
+
+    <section class="loader">
+  <span class="paw">🐾</span>
+  <span class="paw">🐾</span>
+  <span class="paw">🐾</span>
+
+  <section class="coffee-cup">
+    <span class="steam steam1"></span>
+    <span class="steam steam2"></span>
+    <span class="steam steam3"></span>
+    <span class="cup">☕</span>
+  </section>
+</section>
+    
+     <header class="Menu_Superior">
+  <nav>
+    <h1 class="gato">
+      <img src="./IMG/otro logo.png" alt="Gato_LOgo" width="200px" height="200px"> 
+      
+    </h1>
+    <a href="./INDEX.html">Inicio</a>
+    <section class="dropdown">
+      <a href="menu.html">Menú ▾</a>
+      <section class="submenu">
+        <a href="menu.html#combos">🍽️ Combos del Día</a>
+        <a href="menu.html#bebidasCalientes" >☕ Bebidas Calientes</a>
+        <a href="menu.html#bebidasFrias">🧊 Bebidas Frías</a>
+        <a href="menu.html#Postres">🍰 Delicias Dulces</a>
+        <a href="menu.html#Panes">🍞 Variedades de Pan</a>
+        <a href="menu.html#OpcionesSaladas">🥪 Opciones Saladas</a>
+      </section>
+    </section>
+    <a href="./Galeria.html">Galería</a>
+    <a href="./Sobrenosostros.html">Sobre Nosotros</a>
+    <a href="./Contacto.html">Contacto</a>
+  </nav>
+</header>
+  <header class="encabezado-pagina">
+    <h1>Contáctanos</h1>
+    <p>¿Tienes alguna duda o sugerencia? ¡Nos encantaría escucharte!</p>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="contacto-container">
+
+    <!-- Formulario de contacto -->
+    <section class="formulario-contacto">
+      <h2>Envíanos un mensaje</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button class="submit" type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+    <!-- Información de contacto -->
+    <section class="info-contacto">
+      <h2>Información de contacto</h2>
+      <p><strong>Dirección:</strong> Calle 42 #15-23, Bogotá, Colombia</p>
+      <p><strong>Teléfono:</strong> +57 312 456 7890</p>
+      <p><strong>Email:</strong> contacto@catcoffee.co</p>
+      <p><strong>Horarios:</strong> Lunes a Sábado de 8:00 a.m. a 7:00 p.m.</p>
+
+      <!-- Mapa ilustrativo -->
+      <img src="./IMG/Local1.jpeg" alt="Ubicación de Cat Coffee" class="mapa">
+    </section>
+
+  </main>
+
+
+
+  <br><br>
+
+  <footer>
+    <a>© 2025 Cat Coffee. Todos los derechos reservados.</a>
+    <a>
+      <a href="https://facebook.com/catcoffee" target="_blank">Facebook</a> |
+      <a href="https://instagram.com/catcoffee" target="_blank">Instagram</a> |
+      <a href="https://wa.me/573223786677" target="_blank">WhatsApp</a>
+    </a>
+  </footer>
+
+
+      <!-- Botón hamburguesa -->
+
+  <!-- Botón hamburguesa -->
+<button id="btn-hamburguesa" class="hamburguesa-flotante" aria-label="Abrir menú">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Menú lateral -->
+<nav id="menu-lateral-personal" class="menu-lateral-personal">
+  <a href="./INDEX.html">Inicio</a>
+  <br>
+  <a href="./Menu.html">Menú</a>
+  <br>
+  <a href="./Galeria.html">Galería</a>
+  <br>
+  <a href="Sobrenosostros.html">Sobre Nosotros</a>
+  <br>
+  <a href="./Contacto.html">Contacto</a>
+</nav>
+
+
+
+  <script src="js.js"></script>
+
+
+
+  <!-- Juan Ruiz -->
+<!-- Contacto flotante con menú hamburguesa e íconos -->
+
+<section class="contacto-flotante">
+  <input type="checkbox" id="toggle-contacto" hidden>
+  
+  <label for="toggle-contacto" class="boton-contacto" title="Contáctanos">
+    <img src="./IMG/TELEFONO.png" alt="Teléfono" />
+  </label>
+
+  <nav class="menu-contacto">
+    <a href="https://wa.me/573223786677" target="_blank" title="WhatsApp">
+      <img src="./IMG/WHATSAPP.png" alt="WhatsApp">
+    </a>
+    <a href="https://facebook.com/catcoffee" target="_blank" title="Facebook">
+      <img src="IMG/FACEBOOK.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/catcoffee" target="_blank" title="Instagram">
+      <img src="./IMG/INSTAGRAM.png" alt="Instagram">
+    </a>
+  </nav>
+</section>
+
+
+
+
+
+  <button id="btnArriba" onclick="subirArriba()">↑</button>
+</body>
+</html>

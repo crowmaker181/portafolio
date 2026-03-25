@@ -1,0 +1,16 @@
+/* Elimina margen por defecto del body */
+body {
+  margin: 0;
+  font-family: 'Satisfy', cursive;
+  background-color: rgb(241, 241, 207);
+}
+
+/* Cuadro inicial pegado arriba */
+.cuadro-inicial {
+  background-color: #74542bf5;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 0 0 20px 20px; /* solo redondeado abajo */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

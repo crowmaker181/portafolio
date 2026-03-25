@@ -1,0 +1,585 @@
+body {
+  background-color: rgb(241, 241, 207);
+  font-family: 'Satisfy', cursive;
+  margin: 0;
+  padding: 80px 20px 0 20px; /* top ya tiene 80px, añade laterales */
+font-size: 22px;
+}
+
+.Menu_Superior {
+  position: static;
+  top: 0 ;
+  left: 0;
+  width: 100%;
+  background-color: #74542bf5;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+.Menu_Superior nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  padding: 6px;
+  gap: 8px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+}
+
+.Menu_Superior nav a,
+.Menu_Superior nav .dropdown > a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #74542bf5;
+  background-color: rgb(241, 241, 207);
+  padding: 8px 0;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+.Menu_Superior nav a:hover,
+.Menu_Superior nav .dropdown > a:hover {
+  background-color: white;
+}
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(241, 241, 207);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 9999;
+  animation: ocultarLoader 3s forwards;
+  flex-direction: row;
+}
+
+.paw {
+  font-size: 2.5rem;
+  animation: saltar 1s infinite;
+  opacity: 0.8;
+}
+
+.paw:nth-child(1) { animation-delay: 0s; }
+.paw:nth-child(2) { animation-delay: 0.2s; }
+.paw:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes saltar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.coffee-cup {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  margin-left: 40px;
+}
+
+.cup {
+  font-size: 5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.steam {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  width: 10px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: subirHumo 2s infinite ease-in-out;
+}
+
+.steam1 { animation-delay: 0s; transform: translateX(-20px); }
+.steam2 { animation-delay: 0.5s; transform: translateX(0px); }
+.steam3 { animation-delay: 1s; transform: translateX(20px); }
+
+@keyframes subirHumo {
+  0% { opacity: 0; transform: translateY(0) scaleX(1); }
+  50% { opacity: 1; transform: translateY(-20px) scaleX(1.2); }
+  100% { opacity: 0; transform: translateY(-40px) scaleX(0.8); }
+}
+
+@keyframes ocultarLoader {
+  0%, 90% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.contenido-principal {
+  opacity: 0;
+  animation: mostrarContenido 3.1s forwards;
+}
+
+@keyframes mostrarContenido {
+  to { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+.menu-secciones {
+  width: 220px;
+   display: inline-block;
+  vertical-align: top;
+  position: sticky;  /* cambio aquí */
+  top: 50px;            /* para que se pegue al llegar arriba */
+  /* si quieres que esté a la derecha o izquierda, usa left o right */
+  /* por ejemplo si quieres que quede a la izquierda: */
+  left: 0;
+  /* o a la derecha: right: 0; */
+  /* background para que no sea transparente */
+  background-color: white;
+  z-index: 1000; /* para que esté encima */
+}
+
+.menu-secciones button {
+  height: 60px;
+  font-size: 16px;
+  display: block;  /* corregido */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: 2px solid #74542bf5;
+  background-color: white;
+  border-radius: 5px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+/* El resto igual */
+
+.menu-secciones button:hover,
+.menu-secciones button.active {
+  background-color: #74542bf5;
+  color: white;
+}
+.contenido {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 220px); /* ancho restante */
+
+  position: relative;
+  left: 30px;
+  flex-grow: 1;
+  border: 2px solid #74542bf5;
+  background-color: beige;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 200px;
+}
+.contenido h2 {
+  margin-top: 0;
+}
+
+main.contenido {
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Contenedor UL como grilla de 2 columnas */
+/* Contenedor UL como grilla de 2 columnas */
+.lista-productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* siempre 2 por fila */
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Cada LI será una tarjetica */
+.lista-productos li {
+  border: solid;
+  color: black;
+  border-color: #74542bf5;
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column; /* apila verticalmente */
+  align-items: center;
+  justify-content: flex-start; /* todo hacia arriba */
+  gap: 10px; /* separa imagen, nombre y precio */
+  height: auto; /* ajusta según contenido */
+}
+
+
+.lista-productos li img {
+  order: -1; /* fuerza que la imagen vaya arriba */
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Precio dentro de la tarjeta */
+li strong {
+  position: static ; /* ya no se superpone */
+  transform: none ;
+  margin-top: 5px;  /* separa del nombre */
+  color: #74542bf5;
+  font-weight: bold;
+  pointer-events: auto;
+  background: none;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+
+
+strong {
+  color: black;
+}
+li {
+  position: relative; /* necesario para que strong se posicione relativo a li */
+}
+
+
+@media (max-width: 768px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  .tarjeta {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tarjeta figcaption {
+  padding: 16px 12px 20px 12px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.4;
+}
+
+
+
+footer {
+  background-color: #74542bf5;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+button {
+  background-color: beige;
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #74542bf5;
+}
+
+@media (max-width: 768px) {
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* Estilo para tarjetas dentro de enlaces */
+.productos a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Botón hamburguesa flotante */
+.hamburguesa-flotante {
+  display: none; /* ⬅️ Oculto al inicio */
+  position: fixed;
+  /* ...todo lo demás que ya tienes... */
+  top: 4%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: grab;
+  z-index: 2000;
+}
+
+.hamburguesa-flotante span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Transformación a X cuando está activo */
+.hamburguesa-flotante.activo span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguesa-flotante.activo span:nth-child(2) {
+  opacity: 0;
+}
+.hamburguesa-flotante.activo span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menú lateral oculto por defecto */
+.menu-lateral-personal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: beige;
+  padding: 80px 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-lateral-personal a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.menu-lateral-personal.activo {
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+/*   Juan Ruiz    */
+/* Contacto flotante estilo hamburguesa con iconos */
+.contacto-flotante {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  
+  z-index: 999;
+}
+
+.boton-contacto {
+  background-color: #74542bf5;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.boton-contacto:hover {
+  background-color: white;
+}
+
+.boton-contacto img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Menú oculto por defecto */
+.menu-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.menu-contacto a {
+  margin: 10px 0;
+}
+
+.menu-contacto img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s;
+}
+
+.menu-contacto img:hover {
+  transform: scale(1.3);
+}
+
+/* Activar menú cuando checkbox está marcado */
+#toggle-contacto:checked + .boton-contacto + .menu-contacto {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.gato{
+  color: white;
+}
+
+
+
+
+
+
+
+#btnArriba {
+  display: none; /* Oculto al inicio */
+  position: fixed;
+  bottom: 20px;
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #74542bf5;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%; /* Círculo */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+#btnArriba:hover {
+  background: #5b3f22f5; /* un poco más oscuro al pasar el mouse */
+}
+
+
+#carrito-cuadro {
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  width: 250px;
+  background: #fff;
+  border: 2px solid #444;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+}
+
+#carrito-cuadro h3 {
+  margin-top: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#carrito-cuadro ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#carrito-cuadro li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#carrito-cuadro button {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#carrito-cuadro button:hover {
+  background: #cc0000;
+}

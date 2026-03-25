@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpace — Registrarse</title>
+  <link rel="stylesheet" href="BookSpace.css">
+</head>
+<body class="login-body">
+
+  <main class="login-container">
+    <h2>Registrarse</h2>
+    <form class="login-form" id="registerForm">
+      <input type="text" id="nombreRegistro" placeholder="Nombre completo" required>
+      <input type="email" id="emailRegistro" placeholder="Correo electrónico" required>
+      <input type="password" id="passwordRegistro" placeholder="Contraseña" required>
+      <input type="password" id="confirmPasswordRegistro" placeholder="Confirmar contraseña" required>
+      <button type="submit" class="btn-primary">Crear Cuenta</button>
+      <p class="error-message" id="registerErrorMessage"></p>
+      <p class="register-text">¿Ya tienes cuenta? <a href="index.html">Iniciar Sesión</a></p>
+    </form>
+  </main>
+  
+  <!-- Importa la librería de Supabase -->
+  <script src="../../assets/js/supabase.js"></script>
+  
+  <!-- Tu script JavaScript para registro -->
+  <script src="registro.js"></script>
+
+  <!-- 🔘 Botón de cambio de tema -->
+  <button id="toggle-theme" style="position: fixed; bottom: 15px; right: 15px; padding: 10px; border-radius: 5px; cursor: pointer;">
+    🌞 / 🌙
+  </button>
+
+  <!-- Script del cambio de tema -->
+  <script src="modo claro oscuro.js" defer></script>
+
+</body>
+</html>

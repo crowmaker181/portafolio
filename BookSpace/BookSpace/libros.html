@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpace — Catálogo de Libros</title>
+  <link rel="stylesheet" href="BookSpace.css">
+  <link href="../../assets/css/poppins.css" rel="stylesheet">
+</head>
+<button id="translate-button">
+    🌐 Traducir (ES/EN)
+  </button>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">📚 BookSpace</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="libros.html" class="active">Libros</a></li>
+          <li><a href="autores.html">Autores</a></li>
+          <li><a href="categorias.html">Categorías</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CATÁLOGO ===== -->
+  <main class="container">
+    <section class="catalogo">
+      <h2>Catálogo de Libros</h2>
+
+      <!-- BUSCADOR -->
+      <form class="search-bar">
+        <label for="searchInput" class="sr-only">Buscar libro, autor o categoría</label>
+        <input type="text" id="searchInput" placeholder="Buscar libro, autor o categoría...">
+        <button type="button" id="searchBtn" class="btn-primary">Buscar</button>
+      </form>
+
+      <!-- LISTA DE LIBROS -->
+      <ul class="book-grid" id="bookGrid">
+
+        <!-- LIBROS EXISTENTES -->
+        <li class="book-card" data-title="El Principito" data-author="Antoine de Saint-Exupéry" data-category="Fantasía">
+          <img src="./el principito.jpg" alt="El Principito">
+          <h3>El Principito</h3>
+          <p>Antoine de Saint-Exupéry</p>
+          <span class="price" data-price="15000">$15.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="1984" data-author="George Orwell" data-category="Ciencia Ficción">
+          <img src="./1984.jpg" alt="1984">
+          <h3>1984</h3>
+          <p>George Orwell</p>
+          <span class="price" data-price="20000">$20.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="Cien años de soledad" data-author="Gabriel García Márquez" data-category="Realismo mágico">
+          <img src="./cien años de soledad.jpg" alt="Cien años de soledad">
+          <h3>Cien años de soledad</h3>
+          <p>Gabriel García Márquez</p>
+          <span class="price" data-price="25000">$25.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="Harry Potter y la piedra filosofal" data-author="J.K. Rowling" data-category="Fantasía">
+          <img src="./harry potter.jpg" alt="Harry Potter">
+          <h3>Harry Potter y la piedra filosofal</h3>
+          <p>J.K. Rowling</p>
+          <span class="price" data-price="18000">$18.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <!-- NUEVOS LIBROS -->
+        <li class="book-card" data-title="666 La casa endemoniada" data-author="Jay Anson" data-category="Terror">
+          <img src="./666 la casa.jpg" alt="666 La casa endemoniada">
+          <h3>666: La casa endemoniada</h3>
+          <p>Jay Anson</p>
+          <span class="price" data-price="23000">$23.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="Bag of Bones" data-author="Stephen King" data-category="Terror">
+          <img src="./saco de huesos .jpg" alt="Bag of Bones">
+          <h3>Bag of Bones</h3>
+          <p>Stephen King</p>
+          <span class="price" data-price="27000">$27.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="Ortiga y Hueso" data-author="T. Kingfisher" data-category="Fantasía">
+          <img src="./ortiga.jpg" alt="Ortiga y Hueso">
+          <h3>Ortiga y Hueso</h3>
+          <p>T. Kingfisher</p>
+          <span class="price" data-price="22000">$22.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="Rojo, blanco y sangre azul" data-author="Casey McQuiston" data-category="Romance">
+          <img src="./rojo blanco.jpg" alt="Rojo, blanco y sangre azul">
+          <h3>Rojo, blanco y sangre azul</h3>
+          <p>Casey McQuiston</p>
+          <span class="price" data-price="19000">$19.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="A dos metros de ti" data-author="Rachael Lippincott" data-category="Romance">
+          <img src="./a dos metros de ti.jpg" alt="A dos metros de ti">
+          <h3>A dos metros de ti</h3>
+          <p>Rachael Lippincott</p>
+          <span class="price" data-price="21000">$21.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+        <li class="book-card" data-title="El sonido de tu piel al desgarrarse" data-author="Álvaro Vanegas" data-category="Terror">
+          <img src="./el sonido de tu piel.jpg" alt="El sonido de tu piel al desgarrarse">
+          <h3>El sonido de tu piel al desgarrarse</h3>
+          <p>Álvaro Vanegas</p>
+          <span class="price" data-price="24000">$24.000</span>
+          <button class="btn-primary">Agregar al carrito</button>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===== CARRITO DE COMPRAS ===== -->
+  <aside id="cart" class="cart hidden">
+    <h3>🛒 Carrito de Compras</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: $0</p>
+
+    <nav class="cart-actions">
+      <button id="buy-cart" class="btn-primary">Comprar</button>
+      <button id="clear-cart" class="btn-secondary">Vaciar carrito</button>
+    </nav>
+  </aside>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2025 BookSpace</p>
+      <div class="social-links">
+        <a href="#" class="social-item">
+          <img src="./fecebook.jpg" alt="Facebook"> Facebook
+        </a>
+        <a href="#" class="social-item">
+          <img src="./x.jpg" alt="Twitter"> Twitter
+        </a>
+        <a href="#" class="social-item">
+          <img src="./insta.jpg" alt="Instagram"> Instagram
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/supabase.js" defer></script>
+  <!-- ===== SCRIPT ===== -->
+  <script src="BookSpace.js" defer></script>
+
+  <!--  Botón de cambio de tema -->
+  <button id="toggle-theme" style="position: fixed; bottom: 15px; right: 15px; padding: 10px; border-radius: 5px; cursor: pointer;">
+    🌞 / 🌙
+  </button>
+
+  <!-- Script del cambio de tema -->
+  <script src="modo claro oscuro.js" defer></script>
+
+</body>
+</html>
